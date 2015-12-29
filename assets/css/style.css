@@ -395,7 +395,7 @@ textarea:focus{
 @media (min-width: 768px){
 	.email{display: inline-flex}
 }
-.flex-viewport { max-height: 2000px; transition: all 1s ease 0s; }
+.flex-viewport { max-height: 2000px; transition: all 1s ease 0s; z-index: 999 }
 .flexslider > .flex-viewport{width: 100%}
 #harga { float: left; position: relative; top: 10px; left: 20px; }
 .sep-home1 { border-right: 1px dotted #ddd; }.noresult{text-align: center; border: 0}

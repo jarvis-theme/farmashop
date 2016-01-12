@@ -18,7 +18,7 @@
 			</div>
 			<div class="span5">
 				<h1 class="brand-title">
-					@if(@getimagesize(url(logo_image_url())))
+					@if( logo_image_url() )
 					<a href="{{ url('home') }}">
 						<img src="{{ url(logo_image_url()) }}" class="logo">
 					</a>

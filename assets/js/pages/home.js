@@ -9,6 +9,8 @@ define(['jquery','bootstrap','flexslider'], function($)
 				itemWidth: 420,
 				itemMargin: 16,
 				*/
+				itemWidth: 100,
+				minItems: 2,
 				controlNav: "thumbnails",
 				directionNav: false
 			});

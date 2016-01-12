@@ -434,3 +434,4 @@ div.sideline > article, .relate { height: 277px; position:relative; }
 .service{margin-top: 10px; margin-bottom: 25px}.sidetesti{padding-top: 10px}
 .title-testi{font-size: 16px; margin-bottom: 20px}.inputname{height: 30px; width: 100%}.textarea{width: 100%}
 .head, .navs{padding: 0 15px}.table-responsive{overflow-y: hidden}.tab-content{overflow: unset}
+.fancybox > img{max-width: 100%; height: auto;}

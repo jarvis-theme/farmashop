@@ -17,33 +17,33 @@
 			<div id="slider" class="flexslider-produk">
 				<ul class="slides">
 					@if($produk->gambar1!='')   
-					<li data-thumb="{{product_image_url($produk->gambar1,'medium')}}">
+					<li data-thumb="{{product_image_url($produk->gambar1,'thumb')}}">
 						<a class="fancybox" href="{{product_image_url($produk->gambar1, 'large')}}" title="{{$produk->nama}}">
-							{{HTML::image(product_image_url($produk->gambar1,'medium'), $produk->nama, array('class'=>'img-responsive'))}}
+							{{HTML::image(product_image_url($produk->gambar1,'large'), $produk->nama, array('class'=>'img-responsive'))}}
 						</a>
 					</li>
 					@endif  
 
 					@if($produk->gambar2!='')   
-					<li data-thumb="{{product_image_url($produk->gambar2,'medium')}}">
+					<li data-thumb="{{product_image_url($produk->gambar2,'thumb')}}">
 						<a class="fancybox" href="{{product_image_url($produk->gambar2, 'large')}}" title="{{$produk->nama}}">
-							{{HTML::image(product_image_url($produk->gambar2,'medium'),$produk->nama, array('class'=>'img-responsive'))}}
+							{{HTML::image(product_image_url($produk->gambar2,'large'),$produk->nama, array('class'=>'img-responsive'))}}
 						</a>
 					</li>
 					@endif  
 
 					@if($produk->gambar3!='')   
-					<li data-thumb="{{product_image_url($produk->gambar3,'medium')}}">
+					<li data-thumb="{{product_image_url($produk->gambar3,'thumb')}}">
 						<a class="fancybox" href="{{product_image_url($produk->gambar3, 'large')}}" title="{{$produk->nama}}">
-							{{HTML::image(product_image_url($produk->gambar3,'medium'),$produk->nama,array('class'=>'img-responsive'))}}
+							{{HTML::image(product_image_url($produk->gambar3,'large'),$produk->nama,array('class'=>'img-responsive'))}}
 						</a>
 					</li>
 					@endif  
 
 					@if($produk->gambar4!='')   
-					<li data-thumb="{{product_image_url($produk->gambar4,'medium')}}">
+					<li data-thumb="{{product_image_url($produk->gambar4,'thumb')}}">
 						<a class="fancybox" href="{{product_image_url($produk->gambar4, 'large')}}" title="{{$produk->nama}}">
-							{{HTML::image(product_image_url($produk->gambar4,'medium'),$produk->nama,array('class'=>'img-responsive'))}}
+							{{HTML::image(product_image_url($produk->gambar4,'large'),$produk->nama,array('class'=>'img-responsive'))}}
 						</a>
 					</li>
 					@endif  
@@ -122,7 +122,7 @@
                     {{is_terlaris($myproduk)}}
                     @endif
 					<div class="view thumb-prod">
-						{{HTML::image(product_image_url($myproduk->gambar1), $myproduk->nama, array('class'=>'img1'))}}
+						{{HTML::image(product_image_url($myproduk->gambar1, 'thumb'), $myproduk->nama, array('class'=>'img1'))}}
 						<div class="mask">
 							<p>{{short_description($myproduk->deskripsi,100)}}</p>
 							<a href="{{product_url($myproduk)}}" class="tbl-lihat">Lihat</a>

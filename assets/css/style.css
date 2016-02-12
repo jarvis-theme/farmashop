@@ -316,6 +316,7 @@ textarea:focus{
 	#feat { margin-left: auto; margin-right: auto; width: 60%; }
 	#gambar { width: 80%; }.navbar{margin: 0px}
 	.blog-result { margin: 5%; }
+	.list, .sidetesti{padding: 0 10px}
 }
  
 /* Landscape phones and down */

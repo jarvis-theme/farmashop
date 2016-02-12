@@ -2,6 +2,8 @@ var dirTema = document.querySelector("meta[name='theme_path']").getAttribute('co
 
 require.config({
 	baseUrl: '/',
+    urlArgs: "v=002",
+	waitSeconds : 60,
 	shim: {
 		"bootstrap"	: {
 			deps: ['jquery'],
@@ -16,9 +18,6 @@ require.config({
 			deps : ['jquery'],
 		},
 	},
-
-	waitSeconds : 60,
-    urlArgs: "v=001",
 
 	paths: {
 		// LIBRARY

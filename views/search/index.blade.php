@@ -12,7 +12,7 @@
 			</div>
 			<div id="desc">
 				<a href="{{product_url($myproduk)}}">
-					<h4 class="navi-blog pull-left">{{short_description($myproduk->nama,70)}}</h4>
+					<h4 class="navi-blog pull-left">{{short_description($myproduk->nama,25)}}</h4>
 				</a><br><br>
 				<span class="pull-left">{{short_description($myproduk->deskripsi,100)}}</span>
 			</div>

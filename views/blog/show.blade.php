@@ -42,6 +42,7 @@
             </div>
         </div>
         <div class="span4 sidebar">
+            @if(recentBlog()->count() > 0)
             <aside>
                 <p class="title-sidebar"><i class="fa fa-rss"></i> <strong>Artikel Terbaru</strong></p>
                 <ul>
@@ -50,9 +51,13 @@
                     @endforeach
                 </ul>
             </aside>
+            @endif
             <aside class="clearfix tags">
                 <p class="title-sidebar"><i class="fa fa-tag"></i> <strong>Tags</strong></p>
-                {{ getTags('<span class="underline"></span>',$detailblog->tags)}}                      
+                {{ getTags('<span class="underline"></span>',$detailblog->tags)}}
+            </aside>
+            <aside>
+                {{pluginSidePowerup()}}
             </aside>
         </div>
     </div>

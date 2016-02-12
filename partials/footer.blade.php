@@ -70,13 +70,13 @@
                 @endforeach  
                 @foreach(list_payments() as $pay)
                     @if($pay->nama == 'paypal' && $pay->aktif == 1)
-                    <img class="img-responsive" src="{{url('img/bank/paypal.png')}}" alt="paypal" title="Payment" />
+                    <img class="img-responsive" src="{{url('img/bank/paypal.png')}}" alt="paypal" title="Paypal" />
                     @endif
                     @if($pay->nama == 'ipaymu' && $pay->aktif == 1)
                     <img src="{{url('img/bank/ipaymu.jpg')}}" alt="ipaymu" title="Ipaymu" />
                     @endif
                     @if($pay->nama == 'bitcoin' && $pay->aktif == 1)
-                    <img class="img-responsive" src="{{url('img/bitcoin.png')}}" alt="bitcoin" title="Payment" />
+                    <img class="img-responsive" src="{{url('img/bitcoin.png')}}" alt="bitcoin" title="Bitcoin" />
                     @endif
                 @endforeach
                 @if(count(list_dokus()) > 0 && list_dokus()->status == 1)

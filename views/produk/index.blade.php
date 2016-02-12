@@ -4,10 +4,10 @@
     </div>
 
     <div class="row-fluid navs">
-        <div class="span3 hidden-phone">
+        <div class="span3">
             <div class="sidebar">
                 @if(count(list_category()) > 0)
-                <section>
+                <section class="hidden-phone">
                     <h5>Kategori</h5>
                     <nav>
                         <ul>
@@ -16,8 +16,8 @@
                     </nav>
                 </section>
                 @endif
-
-                <section>
+                @if(list_koleksi()->count() > 0)
+                <section class="hidden-phone">
                     <ul class="category collection">
                         <h5>Koleksi</h5>
                         @foreach(list_koleksi() as $mykoleksi)
@@ -25,8 +25,12 @@
                         @endforeach
                     </ul>                    
                 </section>
-
+                @endif
                 <section>
+                    {{pluginSidePowerup()}}
+                </section>
+                @if(vertical_banner()->count() > 0)
+                <section class="hidden-phone">
                     @foreach(vertical_banner() as $item)
                         <div>
                             <a href="{{url($item->url)}}">
@@ -35,6 +39,7 @@
                         </div>
                     @endforeach
                 </section>
+                @endif
             </div>
         </div>
 

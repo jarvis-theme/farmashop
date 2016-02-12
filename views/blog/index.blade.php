@@ -23,6 +23,7 @@
     </div>
 
     <div class="span4 sidebar">
+        @if(recentBlog()->count() > 0)
         <aside>
             <p class="title-sidebar"><i class="fa fa-rss"></i> Artikel Baru</p>
             <ul>
@@ -34,12 +35,17 @@
                 @endforeach
             </ul>
         </aside>
-
+        @endif
+        @if(list_blog_category()->count() > 0)
         <aside class="clearfix tags">
             <p class="title-sidebar"><i class="fa fa-tag"></i> Kategori</p>
             @foreach(list_blog_category() as $value)
             <span><a href="{{ blog_category_url($value) }}">{{$value->nama}}</a></span>
             @endforeach
+        </aside>
+        @endif
+        <aside>
+            {{pluginSidePowerup()}}
         </aside>
     </div>
 </section>

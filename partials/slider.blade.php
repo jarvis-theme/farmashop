@@ -2,13 +2,13 @@
     <ul class="slides span12">
         @foreach (slideshow() as $val)
         <li>
-        	@if($val->text=='')
-        	<a href="#">
-        	@else
-        	<a href="{{filter_link_url($val->text)}}" target="_blank">
-        	@endif
-            	<img alt="{{ $val->text }}" src="{{url(slide_image_url($val->gambar))}}" alt="Slide" />
-        	</a>
+            @if(!empty($val->url))
+                <a href="{{filter_link_url($val->url)}}" target="_blank">
+                @else
+                <a href="#">
+                @endif
+                <img alt="{{ $val->title }}" src="{{url(slide_image_url($val->gambar))}}" />
+            </a>
         </li>
         @endforeach
     </ul>

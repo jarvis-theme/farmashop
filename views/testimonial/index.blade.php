@@ -16,12 +16,12 @@
         <p class="title-testi"><strong>Kirim Testimonial</strong></p>
         <form action="{{url('testimoni')}}" method="post">
             <label>Nama</label>
-            <input type="text" name="nama" class="input-text inputname" required >
+            <input type="text" name="nama" class="txt inputname" required >
             <br><br>
             <label>Testimonial</label>
             <textarea name="testimonial" class="textarea" required></textarea>
             <br><br>
-            <input type="submit" style="float:right" class="cart-button" value="Kirim Testimonial">
+            <input type="submit" class="cart-button pull-right" value="Kirim Testimonial">
             <br><br>
         </form>
     </aside>

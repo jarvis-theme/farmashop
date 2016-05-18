@@ -436,3 +436,20 @@ div.sideline > article, .relate { height: 277px; position:relative; }
 .title-testi{font-size: 16px; margin-bottom: 20px}.inputname{height: 30px; width: 100%}.textarea{width: 100%}
 .head, .navs{padding: 0 15px}.table-responsive{overflow-y: hidden}.tab-content{overflow: unset}
 .fancybox > img{max-width: 100%; height: auto;}
+center#paypal button[type="submit"] {
+    background: #019CDE;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+}
+center#paypal button[type="submit"]:hover { opacity: 0.6; cursor: pointer; }
+form[name="order"] > input[name="SAVE"] {
+  background: #B5062D; border: medium none; padding: 10px; border-radius: 5px; color: #fff;
+}
+form[name="order"] > input[name="SAVE"]:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.btn-veritrans { background: #00aee7; border: none; padding: 10px; border-radius: 5px; color: #fff }
+.btn-veritrans:hover { cursor: pointer; opacity: 0.7 }

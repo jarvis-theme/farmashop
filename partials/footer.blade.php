@@ -12,12 +12,16 @@
                 <div class="footer-menu">
                     <h2 class="title">FOLLOW US</h2>
                     <ul>
+                        @if(!empty($kontak->fb))
                         <li class="sosmed">
                             <a href="{{ url($kontak->fb) }}" target="_blank" title="Facebook"><i class="fa fa-facebook-square"></i></a>
                         </li>
+                        @endif
+                        @if(!empty($kontak->tw))
                         <li class="sosmed">
                             <a href="{{ url($kontak->tw) }}" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a>
                         </li>
+                        @endif
                         @if(!empty($kontak->gp))
                         <li class="sosmed">
                             <a href="{{ url($kontak->gp) }}" target="_blank" title="Google Plus"><i class="fa fa-google-plus"></i></a>
@@ -61,7 +65,7 @@
         </div>
         <div class="row-fluid" id="footer-bottom">
             <div class="span6">
-                <p class="copyright">Copyright © {{date('Y')}} {{ Theme::place('title') }}. All Rights Reserved. Powered by <a href="http://jarvis-store.com" target="_blank">Jarvis Store</a></p>
+                <p class="copyright">Copyright &copy; {{date('Y')}} {{ Theme::place('title') }}. All Rights Reserved. Powered by <a href="http://jarvis-store.com" target="_blank">Jarvis Store</a></p>
             </div>
             <div class="span6">
                 <p class="bank">
@@ -81,6 +85,9 @@
                 @endforeach
                 @if(count(list_dokus()) > 0 && list_dokus()->status == 1)
                     <img src="{{url('img/bank/doku.jpg')}}" alt="doku" title="Doku Myshortcart" />
+                @endif
+                @if(count(list_veritrans()) > 0 && list_veritrans()->status == 1 && list_veritrans()->type == 1)
+                    <img src="{{url('img/bank/veritrans.png')}}" alt="Veritrans" title="Veritrans">
                 @endif
                 </p>
             </div>

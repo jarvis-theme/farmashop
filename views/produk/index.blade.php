@@ -21,7 +21,7 @@
                     <ul class="category collection">
                         <h5>Koleksi</h5>
                         @foreach(list_koleksi() as $mykoleksi)
-                            <li><a href="{{ koleksi_url($mykoleksi) }}">{{$mykoleksi->nama}}</a></li>
+                        <li><a href="{{ koleksi_url($mykoleksi) }}">{{$mykoleksi->nama}}</a></li>
                         @endforeach
                     </ul>                    
                 </section>
@@ -32,11 +32,11 @@
                 @if(vertical_banner()->count() > 0)
                 <section class="hidden-phone">
                     @foreach(vertical_banner() as $item)
-                        <div>
-                            <a href="{{url($item->url)}}">
-                                <img src="{{ url(banner_image_url($item->gambar)) }}" />
-                            </a>
-                        </div>
+                    <div>
+                        <a href="{{url($item->url)}}">
+                            <img src="{{ url(banner_image_url($item->gambar)) }}" alt="Info Promo" />
+                        </a>
+                    </div>
                     @endforeach
                 </section>
                 @endif

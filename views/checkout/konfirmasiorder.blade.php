@@ -180,8 +180,11 @@
                     <center id="paypal">{{$paypalbutton}}</center>
                 @elseif($order->jenisPembayaran==4) 
                     @if(($checkouttype==1 && $order->status < 2) || ($checkouttype==3 && ($order->status!=6)))      
-                        <p>Jika anda belum melakukan pembayaran iPaymu, klik tombol bayar dibawah ini</p><hr/>
-                        <a class="cart-button" href="{{url('ipaymu/'.$order->id)}}" target="_blank">Bayar dengan iPaymu</a>
+                        <center>
+                            <h3>{{trans('content.step5.confirm_btn')}} iPaymu</h3><hr>
+                            <p>{{trans('content.step5.ipaymu')}}</p>
+                            <a class="btn btn-info" href="{{url('ipaymu/'.$order->id)}}" target="_blank">{{trans('content.step5.ipaymu_btn')}}</a>
+                        </center>
                     @endif 
                 @elseif($order->jenisPembayaran==5 && $order->status == 0)
                     <center>

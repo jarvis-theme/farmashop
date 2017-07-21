@@ -11,7 +11,7 @@
             <div class="span3 autoheight">
                 <div class="footer-menu">
                     <h2 class="title">FOLLOW US</h2>
-                    <ul>
+                    <ul id="sosial">
                         @if(!empty($kontak->fb))
                         <li class="sosmed">
                             <a href="{{ url($kontak->fb) }}" target="_blank" title="Facebook"><i class="fa fa-facebook-square"></i></a>

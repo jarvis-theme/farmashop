@@ -3,20 +3,17 @@
         <div class="sidebar">
             {{pluginSidePowerup()}}
             <section>
+                {{--*/ $i=0; /*--}}
                 @foreach(vertical_banner() as $item)
-                <div>
+                <div class="mb10">
                     <a href="{{url($item->url)}}">
-                        <img src="{{ url(banner_image_url($item->gambar)) }}" alt="Info Promo" />
+                        <img src="{{ url(banner_image_url($item->gambar)) }}" alt="{{'Info Promo '.$i++}}" />
                     </a>
                 </div>
                 @endforeach
             </section>
             <section>
                 <h5>Hubungi Kami</h5>
-                @if(!empty($shop->ym))
-                {{ymyahoo($shop->ym)}}
-                <br><br>
-                @endif
                 @if(!empty($shop->telepon))
                 <address class="row-fluid">
                     <div class="pull-left clabel sep-home1" id="sidephone"><i class="fa fa-mobile"></i></div>
@@ -52,8 +49,8 @@
                     <ul>
                         @foreach (list_testimonial() as $items)
                         <li>
-                            <a href="#">{{ $items->isi }}</a><br />
-                            <small>oleh <strong>{{ $items->nama }}</strong></small>
+                            <p>{{ $items->isi }}</p>
+                            <small><i>oleh <strong>{{ ucwords($items->nama) }}</strong></i></small>
                         </li>
                         @endforeach
                     </ul>
@@ -70,16 +67,16 @@
                 <article>
                     <span id="harga" class="badge badge-inverse">{{price($myproduk->hargaJual)}}</span>
 
-                    @if(is_outstok($myproduk))    
-                        {{is_outstok($myproduk)}}
-                    @elseif(is_produkbaru($myproduk))   
-                        {{is_produkbaru($myproduk)}}
-                    @elseif(is_terlaris($myproduk)) 
-                        {{is_terlaris($myproduk)}}
+                    @if(is_outstok($myproduk))
+                        <img src="//d3kamn3rg2loz7.cloudfront.net/assets/farmashop/img/stok-badge.png" class="outstok-badge">
+                    @elseif(is_produkbaru($myproduk))
+                        <img src="//d3kamn3rg2loz7.cloudfront.net/assets/farmashop/img/new-badge.png" class="new-badge">
+                    @elseif(is_terlaris($myproduk))
+                        <img src="//d3kamn3rg2loz7.cloudfront.net/assets/farmashop/img/terlaris-badge.png" class="best-badge">
                     @endif  
 
                     <div class="view thumb-prod">
-                        <img src="{{ url(product_image_url($myproduk->gambar1,'medium')) }}" alt="{{$myproduk->nama}}" class="img1" id="" />
+                        <img src="{{ url(product_image_url($myproduk->gambar1,'medium')) }}" alt="{{$myproduk->nama}}" class="img1" />
                         <div class="mask">
                             <p>{{short_description($myproduk->deskripsi,100)}}</p>
                             <a href="{{product_url($myproduk)}}" class="buy">Beli</a>

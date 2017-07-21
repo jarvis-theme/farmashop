@@ -17,22 +17,26 @@ require.config({
 		"noty" : {
 			deps : ['jquery'],
 		},
+        "js_socials" : {
+            deps : ['jquery']
+        }
 	},
 
 	paths: {
 		// LIBRARY
 		bootstrap 		: ['//maxcdn.bootstrapcdn.com/bootstrap/2.2.1/js/bootstrap.min','js/bootstrap.min'],
-		flexslider		: dirTema+'/assets/js/lib/jquery.flexslider',
-		fancybox		: dirTema+'/assets/js/lib/jquery.fancybox',
-		jquery 			: ['//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min',dirTema+'/assets/js/lib/jquery-1.7.2.min'],
-		respond			: dirTema+'/assets/js/lib/respond',
-		sharrre			: dirTema+'/assets/js/lib/jquery.sharrre',
+        flexslider      : '//d3kamn3rg2loz7.cloudfront.net/assets/farmashop/assets/js/lib/jquery.flexslider',
+		fancybox		: '//d3kamn3rg2loz7.cloudfront.net/assets/farmashop/assets/js/lib/jquery.fancybox',
+		jquery 			: '//d3kamn3rg2loz7.cloudfront.net/assets/farmashop/assets/js/lib/jquery-1.7.2.min',
+		respond			: '//d3kamn3rg2loz7.cloudfront.net/assets/farmashop/assets/js/lib/respond',
+		sharrre			: '//d3kamn3rg2loz7.cloudfront.net/assets/farmashop/assets/js/lib/jquery.sharrre',
+        js_socials      : '//cdn.jsdelivr.net/jquery.jssocials/1.3.1/jssocials.min',
 
 		// ROUTE
-		router          : 'js/router',
-		jq_ui			: 'js/jquery-ui',
-		noty			: 'js/jquery.noty',
-		cart          	: 'js/shop_cart',
+        router          : '//d3kamn3rg2loz7.cloudfront.net/js/router',
+		jq_ui			: '//d3kamn3rg2loz7.cloudfront.net/js/jquery-ui',
+		noty			: '//d3kamn3rg2loz7.cloudfront.net/js/jquery.noty',
+		cart          	: '//d3kamn3rg2loz7.cloudfront.net/js/shop_cart',
 
 		// CONTROLLER
 		blog            : dirTema+'/assets/js/pages/blog',

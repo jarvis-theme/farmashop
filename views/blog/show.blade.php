@@ -27,13 +27,7 @@
                 @endif
             </div>
             <hr>
-            <div class="share">
-                <div id="twitter" data-url="{{Request::url();}}" data-text="{{$detailblog->slug}} | " data-title="Tweet"></div>
-                <div id="facebook" data-url="{{Request::url();}}" data-text="{{$detailblog->slug}}" data-title="Like"></div>
-                <div id="googleplus" data-url="{{Request::url();}}" data-text="{{$detailblog->slug}}" data-title="+1"></div>
-                <div id="delicious" data-url="{{Request::url();}}" data-text="{{$detailblog->slug}}"></div>
-                <div id="stumbleupon" data-url="{{Request::url();}}" data-text="{{$detailblog->slug}}"></div>
-            </div> 
+            <div id="share"></div>
             <br>
             <hr>
             <div>

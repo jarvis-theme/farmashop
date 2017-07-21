@@ -5,8 +5,7 @@
     <div class="span8 list">
         @foreach(list_testimonial() as $key=>$value)
         <article class="testimonial">
-            <a href="#" class="navi-blog"><h4>{{$value->nama}}</h4></a>
-            <p><small class="date"><i class="fa fa-calendar"></i> {{waktuTgl($value->created_at)}}</small></p>
+            <h5>{{ucwords($value->nama)}}</h5>
             <p>{{substr($value->isi,0,250)}}</p>
         </article>
         @endforeach
@@ -16,10 +15,10 @@
         <p class="title-testi"><strong>Kirim Testimonial</strong></p>
         <form action="{{url('testimoni')}}" method="post">
             <label>Nama</label>
-            <input type="text" name="nama" class="txt inputname" required >
+            <input type="text" name="nama" class="txt inputname" value="{{Input::old('nama')}}" required style="width: 100%;">
             <br><br>
             <label>Testimonial</label>
-            <textarea name="testimonial" class="textarea" required></textarea>
+            <textarea name="testimonial" class="textarea" rows="3" required style="width: 100%;">{{Input::old('testimonial')}}</textarea>
             <br><br>
             <input type="submit" class="cart-button pull-right" value="Kirim Testimonial">
             <br><br>

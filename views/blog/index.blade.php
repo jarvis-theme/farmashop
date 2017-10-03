@@ -9,7 +9,10 @@
         <article>
             <a href="{{ blog_url($value) }}" class="navi-blog"><h4>{{$value->judul}}</h4></a>
             <p><small class="date"><i class="fa fa-calendar"></i> {{waktuTgl($value->updated_at)}}</small></p>
-            {{short_description($value->isi,300)}}
+            <img src="{{ imgString($value->isi) }}" class="blog-img" />
+            <div>
+                {{short_description($value->isi,300)}}
+            </div>
             <p><a href="{{ blog_url($value) }}" class="theme">Baca Selengkapnya →</a></p>
         </article>
         @endforeach

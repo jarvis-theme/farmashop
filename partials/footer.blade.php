@@ -11,17 +11,13 @@
             <div class="span3 autoheight">
                 <div class="footer-menu">
                     <h2 class="title">FOLLOW US</h2>
-                    <ul id="sosial">
-                        @if(!empty($kontak->fb))
+                    <ul>
                         <li class="sosmed">
                             <a href="{{ url($kontak->fb) }}" target="_blank" title="Facebook"><i class="fa fa-facebook-square"></i></a>
                         </li>
-                        @endif
-                        @if(!empty($kontak->tw))
                         <li class="sosmed">
                             <a href="{{ url($kontak->tw) }}" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a>
                         </li>
-                        @endif
                         @if(!empty($kontak->gp))
                         <li class="sosmed">
                             <a href="{{ url($kontak->gp) }}" target="_blank" title="Google Plus"><i class="fa fa-google-plus"></i></a>
@@ -40,6 +36,13 @@
                         @if(!empty($kontak->tl))
                         <li class="sosmed">
                             <a href="{{ url($kontak->tl) }}" target="_blank" title="Tumblr"><i class="fa fa-tumblr"></i></a>
+                        </li>
+                        @endif
+                        @if(!empty($kontak->picmix))
+                        <li class="sosmed">
+                            <a href="{{url($kontak->picmix)}}" target="_blank" title="Picmix">
+                                <img class="picmix" src="//d3kamn3rg2loz7.cloudfront.net/blogs/event/icon-picmix.png">
+                            </a>
                         </li>
                         @endif
                     </ul>
@@ -65,14 +68,12 @@
         </div>
         <div class="row-fluid" id="footer-bottom">
             <div class="span6">
-                <p class="copyright">Copyright &copy; {{date('Y')}} {{ Theme::place('title') }}. All Rights Reserved. Powered by <a href="http://jarvis-store.com" target="_blank">Jarvis Store</a></p>
+                <p class="copyright">Copyright © {{date('Y')}} {{ Theme::place('title') }}. All Rights Reserved. Powered by <a href="http://jarvis-store.com" target="_blank">Jarvis Store</a></p>
             </div>
             <div class="span6">
                 <p class="bank">
                 @foreach(list_banks() as $value)  
-                    @if($value->status == 1)
                     <img src="{{bank_logo($value)}}" alt="{{$value->bankdefault->nama}}" title="{{$value->bankdefault->nama}}" />
-                    @endif
                 @endforeach  
                 @foreach(list_payments() as $pay)
                     @if($pay->nama == 'paypal' && $pay->aktif == 1)
@@ -89,10 +90,10 @@
                     <img src="{{url('img/bank/doku.jpg')}}" alt="doku" title="Doku Myshortcart" />
                 @endif
                 @if(count(list_veritrans()) > 0 && list_veritrans()->status == 1 && list_veritrans()->type == 1)
-                    <img src="{{url('img/bank/veritrans.png')}}" alt="Veritrans" title="Veritrans">
+                    <img src="{{url('img/bank/midtrans.png')}}" alt="Midtrans" title="Midtrans">
                 @endif
                 </p>
             </div>
         </div>
     </footer>
-    {{pluginPowerup()}} 
+    {{pluginPowerup()}}

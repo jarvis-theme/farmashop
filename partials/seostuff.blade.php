@@ -1,6 +1,6 @@
 	<title>{{$title}}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="{{trim($description)}}">
+	<meta name="description" content="{{$description}}">
 	<meta name="keywords" content="{{$keywords}}">
 	<meta name="rating" content="general">
 	<meta name="robots" content="index, follow">
